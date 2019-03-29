@@ -75,8 +75,7 @@ afterEvaluate {
             }
 
             enabled config."bundleIn${targetName}" ||
-                config."bundleIn${variant.buildType.name.capitalize()}" ?:
-                targetName.toLowerCase().contains("release")
+                config."bundleIn${variant.buildType.name.capitalize()}"
         }
 
         // Expose a minimal interface on the application variant and the task itself:
